@@ -1,0 +1,4 @@
+*.sw*
+.build/
+t/data/test.*tex
+
