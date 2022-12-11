@@ -101,3 +101,28 @@ This module generates this:
     \end{tabular}
     \label{table:a_csv_file}
     \end{table}
+
+=head1 ATTRIBUTES
+
+=over 4
+
+=item * csv
+
+=item * csv_param
+
+=item * latex
+
+=item * latex_param
+
+=back
+
+=head1 METHODS
+
+=head2 run
+
+    my $obj = App::CSV2LaTeXTable->new(
+        csv   => 'A-csv-file.csv',
+        latex => 'Target_file.tex',
+    );
+
+    $obj->run;

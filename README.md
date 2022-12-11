@@ -58,6 +58,26 @@ M    & 55 & London \\
 
 This is the module behind [csv2latextable](https://metacpan.org/pod/csv2latextable).
 
+# ATTRIBUTES
+
+- csv
+- csv\_param
+- latex
+- latex\_param
+
+# METHODS
+
+## run
+
+```perl
+my $obj = App::CSV2LaTeXTable->new(
+    csv   => 'A-csv-file.csv',
+    latex => 'Target_file.tex',
+);
+
+$obj->run;
+```
+
 
 
 # Development
