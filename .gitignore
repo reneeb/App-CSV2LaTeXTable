@@ -1,4 +1,4 @@
 *.sw*
 .build/
 t/data/test.*tex
-
+App-CSV2LaTeXTable-1.0.0*
