@@ -1,9 +1,13 @@
 #!/usr/bin/env perl
 
+# PODNAME: csv2latextable
+
 use v5.22;
 
 use strict;
 use warnings;
+
+# VERSION
 
 use App::CSV2LaTeXTable;
 use Getopt::Long;

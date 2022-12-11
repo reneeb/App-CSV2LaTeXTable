@@ -10,6 +10,8 @@ use LaTeX::Table;
 use Moo;
 use Text::CSV_XS;
 
+# VERSION
+
 use experimental 'signatures';
 
 has csv         => ( is => 'ro', required => 1 );
