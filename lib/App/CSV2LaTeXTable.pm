@@ -175,3 +175,17 @@ This module generates this:
     );
 
     $obj->run;
+
+=head1 SEE ALSO
+
+=over 4
+
+=item * L<LaTeX::Table>
+
+Used to generate the LaTeX code.
+
+=item * L<Text::CSV_XS>
+
+Used to parse the CSV file
+
+=back
