@@ -18,6 +18,7 @@ has csv         => ( is => 'ro', required => 1 );
 has csv_param   => ( is => 'ro', default => sub { [] } );
 has latex       => ( is => 'ro', required => 1 );
 has latex_param => ( is => 'ro', default => sub { [] } );
+has rotate      => ( is => 'ro', default => sub { 0 } );
 
 sub run ($self) {
     my %csv_params = map { split /=/, $_, 2 } $self->csv_param->@*;
@@ -51,12 +52,21 @@ sub run ($self) {
 
     my $table = LaTeX::Table->new({
         %latex_params,
-        filename => $self->latex,
         header   => $header,
         data     => $data,
     });
 
-    $table->generate;
+    my $latex_string = $table->generate_string;
+
+    if ( $self->rotate ) {
+        my $rotatebox = sprintf 'rotatebox{%s}{', $self->rotate;
+        $latex_string =~ s{begin\{table\}}{$rotatebox};
+        $latex_string =~ s{\\end\{table\}$}{\}};
+    }
+
+    open my $tex_fh, '>', $self->latex or croak $!;
+    print $tex_fh $latex_string;
+    close $tex_fh or croak $!;
 }
 
 1;
@@ -113,6 +123,8 @@ This module generates this:
 =item * latex
 
 =item * latex_param
+
+=item * rotate
 
 =back
 
