@@ -1,6 +1,6 @@
 [![Kwalitee status](https://cpants.cpanauthors.org/dist/App-CSV2LaTeXTable.png)](https://cpants.cpanauthors.org/dist/App-CSV2LaTeXTable)
 [![GitHub issues](https://img.shields.io/github/issues/reneeb/App-CSV2LaTeXTable.svg)](https://github.com/reneeb/App-CSV2LaTeXTable/issues)
-[![CPAN Cover Status](https://cpancoverbadge.perl-services.de/App-CSV2LaTeXTable-1.0.0)](https://cpancoverbadge.perl-services.de/App-CSV2LaTeXTable-1.0.0)
+[![CPAN Cover Status](https://cpancoverbadge.perl-services.de/App-CSV2LaTeXTable-1.1.0)](https://cpancoverbadge.perl-services.de/App-CSV2LaTeXTable-1.1.0)
 [![Cpan license](https://img.shields.io/cpan/l/App-CSV2LaTeXTable.svg)](https://metacpan.org/release/App-CSV2LaTeXTable)
 
 # NAME
@@ -9,7 +9,7 @@ App::CSV2LaTeXTable - Generate LaTeX table from CSV file
 
 # VERSION
 
-version 1.0.0
+version 1.1.0
 
 # SYNOPSIS
 
@@ -64,6 +64,8 @@ This is the module behind [csv2latextable](https://metacpan.org/pod/csv2latextab
 - csv\_param
 - latex
 - latex\_param
+- rotate
+- split
 
 # METHODS
 
@@ -77,6 +79,16 @@ my $obj = App::CSV2LaTeXTable->new(
 
 $obj->run;
 ```
+
+# SEE ALSO
+
+- [LaTeX::Table](https://metacpan.org/pod/LaTeX%3A%3ATable)
+
+    Used to generate the LaTeX code.
+
+- [Text::CSV\_XS](https://metacpan.org/pod/Text%3A%3ACSV_XS)
+
+    Used to parse the CSV file
 
 
 
